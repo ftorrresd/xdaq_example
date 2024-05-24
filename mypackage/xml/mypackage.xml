@@ -1,0 +1,18 @@
+<?xml version='1.0'?>
+
+<xc:Partition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xc="http://xdaq.web.cern.ch/xdaq/xsd/2004/XMLConfiguration-30">
+
+ <!-- Declare a context that contains application -->
+ <xc:Context url="http://0.0.0.0:8069">
+
+ <!-- Declare a HelloWorld application -->
+ <xc:Application class="mypackage::HelloWorld" id="254" instance="0" network="local"/>
+ <xc:Application class="mypackage::SimpleWeb" id="255" instance="0" network="local"/>
+
+ <!-- Shared object library that contains the HelloWorld inplementation -->
+ <xc:Module>${HOME}/myproject/mypackage/lib/linux/x86_64_/libmypackage.so</xc:Module>
+
+ </xc:Context>
+</xc:Partition> 
